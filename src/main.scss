@@ -1,0 +1,83 @@
+@import "variables";
+
+* {
+	box-sizing: border-box;
+}
+
+html, body{
+	background:$background;
+	color: $font-color;
+	font-family: 'Lato', sans-serif;
+	font-size:16px;
+
+	@include mq(950){
+		font-size:14px;
+	}
+
+	@include mq("phablet"){
+		font-size:12px;
+	}
+}
+
+h1, h2, h3{
+	font-weight: 300;
+}
+
+h1{
+	font-size:3em;
+	margin:0;
+}
+
+a{
+	color:$main-color;
+	text-decoration: none;
+}
+
+.page-wrap-wide{
+	max-width: 1650px;
+	margin: 0 auto;
+}
+
+.page-wrap{
+	max-width: 1250px;
+	margin: 0 auto;
+}
+
+.section{
+	margin: 100px 0;
+
+	@include mq("desktop"){
+		margin: 100px 10px;
+	}
+}
+
+.logo{
+	border-top:7px solid $main-color;
+	color: $main-color;
+	display: inline-block;
+	font-size:2.25em;
+	font-weight: 700;
+	letter-spacing: -1px;
+	text-decoration: none;
+	transition: color .3s ease;
+}
+
+.btn.btn-primary{
+	background: $main-color;
+	border:none;
+	color: $font-color-inverted;
+	display: inline-block;
+	font-weight: 600;
+	letter-spacing: 0.1rem;
+	max-width: 100%;
+	min-width: 180px;
+	padding: 15px 30px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	&:hover, &:active{
+		background: darken($main-color, 5%);
+	}
+}
+
